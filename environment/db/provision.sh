@@ -12,11 +12,8 @@ sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org
 # remove existing mongod.conf
 sudo rm /etc/mongod.conf
 
-# Start MongoDB
-sudo service mongod start
-sudo systemctl enable mongod.service
-
 # linking VM directory file and dump a file (etc/mongod.conf)
+# Creating a synced connection - Linking VM file to MongoDB conf
 sudo ln -s /home/ubuntu/environment/mongod.conf /etc/mongod.conf
 
 # restarting VM
